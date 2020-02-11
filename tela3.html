@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MeuPWA</title>
+    <link rel="stylesheet" href="css\bootstrap.css">
+    <link rel="manifest" href="/manifest.json">
+  </head>
+  <body>
+    <h1 class="jumbotron">Bem vindo a minha pagina de teste para PWA</h1>
+    <p>Coisas interessantes aqui</p>
+    <a href="index.html" class="btn btn-warning mr-sm-4">Voltar</a>
+  </body>
+</html>
+<script>
+// Check that service workers are supported
+if ('serviceWorker' in navigator) {
+  // Use the window load event to keep the page load performant
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js');
+  });
+}
+</script>
