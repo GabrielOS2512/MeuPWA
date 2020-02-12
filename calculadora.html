@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MeuPWA</title>
+    <link rel="stylesheet" href="css\bootstrap.css">
+    <link rel="manifest" href="/manifest.json">
+  </head>
+  <body>
+    <script src="js/calc.js"></script>
+    <h1 class="jumbotron">Calculadora PWA/Teste para cache de JS</h1>
+    <a href="index.html" class="btn btn-warning mr-sm-4">Voltar</a>
+    <br><br>
+    <div class="">
+      <label for="n1">Numero 1</label>
+      <input type="text" name="n1" id="n1"><br><br>
+      <label for="n2">Numero 2</label>
+      <input type="text" name="n2" id="n2"><br><br>
+      <input type="button" value="+" onClick="sum()">
+      <input type="button" value="-" onClick="sub('')">
+      <input type="button" value="*" onClick="mult('')">
+      <input type="button" value="/" onClick="div('')"><br><br>
+
+      </select>
+      <label for="res">Resultado</label>
+      <input type="text" name="res" id="res">
+    </div>
+  </body>
+</html>
+<script>
+// Check that service workers are supported
+if ('serviceWorker' in navigator) {
+  // Use the window load event to keep the page load performant
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js');
+  });
+}
+</script>

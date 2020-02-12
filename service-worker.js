@@ -1,5 +1,5 @@
 // SW Version
-const version = '1.0';
+const version = '1.1';
 
 // Static Cache - App Shell
 const appAssets = [
@@ -8,6 +8,8 @@ const appAssets = [
     '/tela3.html',
     '/css/bootstrap.css',
     '/js/bootstrap.js',
+    '/js/calc.js',
+    '/calculadora.html',
 ];
 
 // SW Install
