@@ -9,7 +9,7 @@ const appAssets = [
     '/css/bootstrap.css',
     '/js/bootstrap.js',
     '/js/calc.js',
-    '/calculadora.html'
+    '/calculadora.html',
 ];
 
 // SW Install
@@ -17,7 +17,6 @@ self.addEventListener( 'install', e => {
     e.waitUntil(
         caches.open( `static-${version}` )
             .then( cache => cache.addAll(appAssets) )
-            .catch(reason => console.error(reason))
     );
 });
 
