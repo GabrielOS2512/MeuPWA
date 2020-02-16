@@ -9,7 +9,7 @@ const appAssets = [
     '/css/bootstrap.css',
     '/js/bootstrap.js',
     '/js/calc.js',
-    '/calculadora.html',
+    '/calculadora.html'
 ];
 
 // SW Install
