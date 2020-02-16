@@ -17,6 +17,7 @@ self.addEventListener( 'install', e => {
     e.waitUntil(
         caches.open( `static-${version}` )
             .then( cache => cache.addAll(appAssets) )
+            .catch(reason => console.error(reason))
     );
 });
 
