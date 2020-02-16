@@ -5,7 +5,7 @@
   "background_color": "#005598",
   "display": "standalone",
   "Scope": "/",
-  "start_url": "/index.html",
+  "start_url": "MeuPWA/index.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
