@@ -1,7 +1,7 @@
-// SW Version
+// Versão do SW 'Para testes'
 const version = '1.0';
 
-// Static Cache - App Shell
+// Cache Estatico - App Shell, o que será armazenado na cache
 const appAssets = [
     'index.html',
     'tela2.html',
@@ -9,7 +9,10 @@ const appAssets = [
     'css/bootstrap.css',
     'js/bootstrap.js',
     'js/calc.js',
-    'calculadora.html'
+    'js/local.js',
+    'calculadora.html',
+    'localizacao.html',
+    'favicon.ico'
 ];
 
 // SW Install
@@ -20,7 +23,7 @@ self.addEventListener( 'install', e => {
     );
 });
 
-// SW Activate
+// SW Ativar
 self.addEventListener( 'activate', e => {
 
     // Clean static cache
@@ -34,27 +37,28 @@ self.addEventListener( 'activate', e => {
     e.waitUntil(cleaned);
 });
 
-// Network with Cache Fallback
+// Estratégia Usada - Rede com auxilio da Cache
 const fallbackCache = (req) => {
 
-    // Try Network
+    // Tentar pela Rede 1o
     return fetch(req).then( networkRes => {
 
-        // Check res is OK, else go to cache
+        // Checar se a resposta foi ok, se não tenta a cache
         if( !networkRes.ok ) throw 'Fetch Error';
 
-        // Update cache
+        // Atualiza a cache
         caches.open( `static-${version}` )
             .then( cache => cache.put( req, networkRes ) );
 
-        // Return Clone of Network Response
+        // Retornar o clone da resposta da rede
         return networkRes.clone();
     })
 
-    // Try cache
+    // Tentar pela cache
     .catch( err => caches.match(req) );
 };
 
+//SW Fetch
 self.addEventListener('fetch', e => {
 
     // App shell
