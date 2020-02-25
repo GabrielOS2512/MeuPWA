@@ -3,7 +3,7 @@ function getLocation() {
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
-    console.log("Geo Location not supported by browser");
+    console.log("Navegador Incompativel!");
   }
 }
 //function that retrieves the position
@@ -27,16 +27,16 @@ getLocation();
 function locationError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            return "User denied the request for Geolocation."
+            return "Usuário não deu permisão"
             break;
         case error.POSITION_UNAVAILABLE:
-            return "Location information is unavailable."
+            return "Informações sobre a localização inválida."
             break;
         case error.TIMEOUT:
-            return "The request to get user location timed out."
+            return "Timedout"
             break;
         case error.UNKNOWN_ERROR:
-            return "An unknown error occurred."
+            return "Erro desconhecido"
             break;
     }
 }

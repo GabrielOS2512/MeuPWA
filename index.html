@@ -19,7 +19,7 @@
           <div class="col-md-3" style="">
             <h2>Calculadora</h2>
             <img src="img/calc.jpg" alt="Imagem" style="display: block;margin-left: auto;margin-right: auto;">
-            <p>Calcular coisas</p>
+            <p>Realizar calculos, teste de JS</p>
             <p><a href="calculadora.html" class="btn btn-success mr-sm-4">Avançar</a></p>
           </div>
         </div>
@@ -28,7 +28,7 @@
               <h2>Notificações</h2>
               <img src="img/notifica.jpg" alt="Imagem" style="display: block;margin-left: auto;margin-right: auto;">
               <p>Teste para Push Notifications</p>
-              <p><a href="push.html" class="btn btn-success mr-sm-4">Avançar</a></p>
+              <p><input class="btn btn-success mr-sm-4" type="button" value="Notificação" onClick="notificar()"></p>
             </div>
         </div>
         <div class="row" style="margin: auto;border: 2px solid black;">
@@ -42,20 +42,12 @@
         <div class="row" style="margin: auto;border: 2px solid black;">
             <div class="col-md-3" style="">
               <h2>Banco de Dados</h2>
-              <img src="img/local.jpg" alt="Imagem" style="display: block;margin-left: auto;margin-right: auto;">
-              <p>Teste de um pequeno BD</p>
+              <img src="img/bd2.jpg" alt="Imagem" style="display: block;margin-left: auto;margin-right: auto;">
+              <p>Teste de um pequeno BD utilizando PWA</p>
               <p><a href="bd.html" class="btn btn-success mr-sm-4">Avançar</a></p>
             </div>
         </div>
 
   </body>
 </html>
-<script>
-  // Check that service workers are supported
-  if ('serviceWorker' in navigator) {
-    // Use the window load event to keep the page load performant
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('service-worker.js').catch(console.error);
-    });
-  }
-</script>
+<script src="/main.js"></script>

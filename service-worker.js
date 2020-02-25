@@ -1,5 +1,5 @@
 // Versão do SW 'Para testes'
-const version = '1.0';
+const version = '1.1';
 
 // Cache Estatico - App Shell, o que será armazenado na cache
 const appAssets = [
@@ -12,7 +12,8 @@ const appAssets = [
     'js/local.js',
     'calculadora.html',
     'localizacao.html',
-    'favicon.ico'
+    'favicon.ico',
+    'main.js'
 ];
 
 // SW Install
