@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0014DD"/>
+    <title>Teste de PWA 1.0</title>
+    <link rel="apple-touch-icon" href="images\icons\icon-72x72.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script src="js/indexedDB.js"></script>
+  </head>
+  <body>
+    <form class="form-control" name="pesquisa" method="post" action="#">
+      <h1 class="jumbotron">Teste BD</h1>
+
+      <ul class="list-group" id="lista">
+      </ul>
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Cidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+          </tr>
+        </tbody>
+      </table>
+      <br><br>
+
+      <input type="submit" value="Procurar" onClick="insert()"><a href="index.html" class="btn btn-warning mr-sm-4">Voltar</a><a href="busca.html" class="btn btn-success mr-sm-4">Buscar</a>
+    </form>
+
+  </body>
+</html>

@@ -7,6 +7,8 @@ const appAssets = [
     'tela2.html',
     'tela3.html',
     'css/bootstrap.css',
+    'js/indexeddb.js',
+    'js/selectdb.js',
     'js/bootstrap.js',
     'js/calc.js',
     'js/local.js',
