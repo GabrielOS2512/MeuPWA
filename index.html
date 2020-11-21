@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#0014DD"/>
-    <title>Teste de PWA 1.0</title>
+    <title>PWA</title>
     <link rel="apple-touch-icon" href="images\icons\icon-72x72.png">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="manifest" href="manifest.json">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <script src="main.js"></script>
-    
+
   </head>
   <body>
     <div class="jumbotron">
-      <h3>Testes PWA</h3>
+      <h3>Aplicativo de testes PWA</h3>
     </div>
       <div class="row" style="margin: auto;border: 2px solid black;">
           <div class="col-md-3" style="">
@@ -27,7 +27,15 @@
         </div>
         <div class="row" style="margin: auto;border: 2px solid black;">
             <div class="col-md-3" style="">
-              <h2>Notificações</h2>
+              <h2>Web Notificações</h2>
+              <img src="img/notifica.jpg" alt="Imagem" style="display: block;margin-left: auto;margin-right: auto;">
+              <p>Teste para Web Notifications</p>
+              <p><input class="btn btn-success mr-sm-4" type="button" value="Notificação" onClick="notificar()"></p>
+            </div>
+        </div>
+        <div class="row" style="margin: auto;border: 2px solid black;">
+            <div class="col-md-3" style="">
+              <h2>Push Notificações</h2>
               <img src="img/notifica.jpg" alt="Imagem" style="display: block;margin-left: auto;margin-right: auto;">
               <p>Teste para Push Notifications</p>
               <p><input class="btn btn-success mr-sm-4" type="button" value="Notificação" onClick="notificar()"></p>
@@ -45,7 +53,7 @@
             <div class="col-md-3" style="">
               <h2>Banco de Dados</h2>
               <img src="img/bd2.jpg" alt="Imagem" style="display: block;margin-left: auto;margin-right: auto;">
-              <p>Teste de um pequeno BD utilizando PWA</p>
+              <p>Teste de um pequeno BD utilizando IndexedDB</p>
               <p><a href="bd.html" class="btn btn-success mr-sm-4">Avançar</a></p>
             </div>
         </div>

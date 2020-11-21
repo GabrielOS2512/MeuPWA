@@ -9,6 +9,8 @@ DBOpenRequest.onerror = function(event) {
 DBOpenRequest.onsuccess = function(event) {
   document.getElementById("lista").innerHTML += '<li class="list-group-item">BD inicializado.</li>';
   db = DBOpenRequest.result;
+
+  //Select todos
   var objectStore = db.transaction("Pessoa").objectStore("Pessoa");
 
   objectStore.openCursor().onsuccess = function(event) {
